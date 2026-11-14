@@ -1,0 +1,16 @@
+{
+  "openapi": "3.0.3",
+  "info": {"title": "Fictional Professional Directory", "version": "1.0.0"},
+  "paths": {
+    "/fictional/professionals/lookup": {
+      "get": {
+        "operationId": "lookupProfessional",
+        "description": "Identity lookup uses an exact email match. Lookup does not grant organization directory visibility.",
+        "parameters": [
+          {"name": "email", "in": "query", "required": true, "schema": {"type": "string", "format": "email"}}
+        ],
+        "responses": {"200": {"description": "Match candidate or no match"}}
+      }
+    }
+  }
+}
